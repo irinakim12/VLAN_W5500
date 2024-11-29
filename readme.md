@@ -1,6 +1,6 @@
 # VLAN Testing Project (Based on W5500)
 
-![W5500 Test](path/to/cover-image.png)
+![W5500 Test](image/vlan_opeation.PNG)
 
 This project tests VLAN tagging and handling in **MACRAW mode** using the W5500 (Ethernet chip). It employs Python for data processing, Wireshark for packet capture
 
@@ -39,7 +39,7 @@ The project includes the following materials:
 
 2. **Python Scripts**:
    - Scripts for generating data frames and controlling the W5500.
-   - Example script: `./script/vlan.py`.
+   - Example script: `./py/vlan.py`.
 
 
 ---
@@ -65,9 +65,10 @@ Follow these steps to set up the project:
 1. **Run the Python Script**:
    - Generate VLAN-tagged frames and send them using the W5500:
      ```bash
-     python ./script/vlan.py
+     python ./py/vlan.py
      ```
-
+    ![Wireshark VLAN Capture](image/vlan_wireshark_capture.PNG)
+    Press the Enter key to transmit VLAN data. After transmission, wait for a response for 2 seconds, then wait for the next Enter key press.
 2. **Analyze with Wireshark**:
    - Open Wireshark and capture packets from your network interface.
    - Apply a VLAN filter (`0x8100`) to isolate VLAN-tagged packets:
@@ -81,7 +82,4 @@ Follow these steps to set up the project:
 
 1. **Wireshark Capture**:
    - Below is an example of VLAN-tagged packets captured with Wireshark:
-     ![Wireshark VLAN Capture](images/wireshark_capture.png)
-
-
-
+     ![Wireshark VLAN Capture](image/vlan_wireshark_capture.PNG)
